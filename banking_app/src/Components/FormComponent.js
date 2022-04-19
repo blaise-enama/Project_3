@@ -1,45 +1,47 @@
 import React from "react";
 import "../CSS/FormComponent.css";
 
-function FormComponent(props) { 
+function FormComponent(props) {
     console.log('props', props)
 
     return(
         <div className = "FormComponent">
+
             <form >
 
             <label> Username: </label>
-            <input 
+            <input
             type = "text"
             value = {props.value}
             name = "Username"
-            className="username" 
-            onChange={props.handleChange} 
+            className="username"
+            onChange={props.handleChange}
+
             />
 
             <label> Background color</label>
-            <input 
+            <input
             type = "color"
-            value = {props.value} 
+            value = {props.value}
             name = "background color"
-            onChange={props.handleChange} 
+            onChange={props.handleChange}
             />
 
             <label> Text color</label>
-            <input 
+            <input
             type = "color"
-            value = {props.value} 
+            value = {props.value}
             name =  "text color"
-            onChange={props.handleChange} 
+            onChange={props.handleChange}
             />
 
-            <input 
+            <input
             type = "submit"
             />
 
             </form>
-        </div>  
+        </div>
     );
 }
 
-export default FormComponent; 
+export default FormComponent;
