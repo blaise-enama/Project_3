@@ -1,5 +1,6 @@
 import { React, Component } from "react";
 import FormComponent from "./FormComponent"
+import "../CSS/ButtonComponent.css";
 
 class ButtonComponent extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class ButtonComponent extends Component {
         return (
             <div className= 'button'>
                 <button onClick = {this.handleClick} click={click}>Customize Profile </button>
-                {click ? <FormComponent handleSubmit = {this.handleForm}  show={this.state.show} value = {value}/> : null}  
+                {click ? <FormComponent handleSubmit = {this.handleForm}  show={this.state.show} handleChange = {this.handleChange}  /> : null}  
                 {}
             </div>
         );
