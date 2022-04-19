@@ -33,8 +33,7 @@ function FormComponent(props) {
             />
 
             </form>
-        </div>
-        
+        </div>  
     );
 }
 

@@ -40,7 +40,7 @@ class ButtonComponent extends Component {
             <div className= 'button'>
                 <button onClick = {this.handleClick} click={click}>Customize Profile </button>
                 {click ? <FormComponent handleSubmit = {this.handleForm}  show={this.state.show} value = {value}/> : null}  
-                {/* <FormComponent handleSubmit = {this.handleForm} show={this.state.show}/> */}
+                {}
             </div>
         );
     }
