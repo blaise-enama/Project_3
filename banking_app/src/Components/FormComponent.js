@@ -21,7 +21,7 @@ function FormComponent(props) {
 
             <label> Background color</label>
             <input
-            type = "color"
+            type = "text"
             value = {props.value}
             name = "background color"
             onChange={props.handleChange}

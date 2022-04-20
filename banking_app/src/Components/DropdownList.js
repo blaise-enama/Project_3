@@ -49,7 +49,7 @@ class DropdownList extends Component {
     const { debit, credit, value, choice } = this.state
     return (
       <div className="list">
-        <h1 style={{color:"red"}}>Hello, {this.props.name}</h1>
+        {/* <h1 style={{color:"red"}}>Hello, {this.props.name}</h1> */}
         <div className="menu">
           <form onSubmit={this.handleForm}>
             <select onChange={this.handleSelect} value={value}>
