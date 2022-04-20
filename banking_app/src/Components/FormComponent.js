@@ -29,16 +29,14 @@ function FormComponent(props) {
 
             <label> Text color</label>
             <input
-            type = "color"
+            type = "text"
             value = {props.value}
-            name =  "text color"
+            name =  "textColor"
             onChange={props.handleChange}
             />
 
-            <input
-            type = "submit"
-            value = "submit"
-            />
+            <button> submit </button> 
+            
 
             </form>
         </div>

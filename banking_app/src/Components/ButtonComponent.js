@@ -6,6 +6,7 @@ import "../CSS/ButtonComponent.css";
 class ButtonComponent extends Component {
 
     constructor(props) {
+        
         super(props)
         this.state = {
             click: false,
