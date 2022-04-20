@@ -1,10 +1,8 @@
 import { React, Component } from 'react'
 import './App.css';
-//import Clock from './components/Clock';
-//import Form from './components/Form'
-//import Content from './components/Form';
+
 import Clock from './Components/Clock';
-import DropdownList from './DropdownList';
+import DropdownList from './Components/DropdownList';
 
 
 
@@ -24,12 +22,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Clock user= {this.state.user} />
-        <Content /> */}
+      {/* <Clock user= {this.state.user} /> */}
         <Clock/>
-
         <DropdownList/>
-        {/* <Form changeUser = {this.changeUser} /> */}
+        {/* <Form changeUser = {this.changeUser} />  */}
       </div>
     );
   }

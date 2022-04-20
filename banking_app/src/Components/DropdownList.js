@@ -1,6 +1,6 @@
 import { React, Component} from "react";
 import axios from "axios";
-
+import "../CSS/DropdownList.css"
 
 
 class DropdownList extends Component {
@@ -12,7 +12,7 @@ class DropdownList extends Component {
       debit: [],
       choice: false,
       value: '',
-
+      
     }
   }
 
@@ -35,20 +35,6 @@ class DropdownList extends Component {
 
   handleForm = async (e) => {
     e.preventDefault()
-    console.log(`don't refresh!!!`)
-    // try {
-    //   const debitUrl = 'https://moj-api.herokuapp.com/debits'
-    //   const creditUrl = 'https://moj-api.herokuapp.com/credits'
-
-    //   const debitData = await axios.get(debitUrl);
-    //   const creditData = await axios.get(creditUrl);
-    //   console.log("debit data ", debitData.data)
-    //   console.log("credit data", creditData.data)
-
-    //   this.setState({ debitList: debitData.data, creditList: creditData.data })
-    // } catch (error) {
-    //   console.log("Hey... try again, bud", error);
-    // }
   }
 
   handleSelect = (e) =>{
@@ -63,7 +49,7 @@ class DropdownList extends Component {
     const { debit, credit, value, choice } = this.state
     return (
       <div className="list">
-        
+        <h1 style={{color:"red"}}>Hello, {this.props.name}</h1>
         <div className="menu">
           <form onSubmit={this.handleForm}>
             <select onChange={this.handleSelect} value={value}>
@@ -73,7 +59,7 @@ class DropdownList extends Component {
             </select>
           </form>
           <div>
-          {value === 'debit' && value !== '----' ?
+          {value === 'debit' ?
                 debit.map(account => {
                   return (
                     <div>
@@ -83,7 +69,7 @@ class DropdownList extends Component {
 
                     </div>
                   )
-                }) : (credit.map(account  => {
+                }) : value ==='credit' ? credit.map(account  => {
                   return (
                     <div>
                       <p>{account.description}</p>
@@ -93,10 +79,10 @@ class DropdownList extends Component {
 
                     </div>
                   )
-                }))
+                }) : null
   }
           </div>
-
+          
         </div>
       </div>
     )
