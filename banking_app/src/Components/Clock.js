@@ -49,6 +49,8 @@ class Clock extends React.Component {
         <ButtonComponent handleChange={this.handleChange} handleForm={this.handleForm}/>
         <h1>Hello, {this.state.Username}</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        <div > Background Color: {this.state.backgroundColor}</div>
+        <div> Text Color: {this.state.textColor} </div> 
       </div>
     )
   }
