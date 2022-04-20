@@ -69,7 +69,7 @@ class DropdownList extends Component {
 
                     </div>
                   )
-                }) : (credit.map(account  => {
+                }) : value ==='credit' ? credit.map(account  => {
                   return (
                     <div>
                       <p>{account.description}</p>
@@ -79,7 +79,7 @@ class DropdownList extends Component {
 
                     </div>
                   )
-                }))
+                }) : null
   }
           </div>
           
