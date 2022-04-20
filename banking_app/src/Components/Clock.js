@@ -1,12 +1,17 @@
 import React from 'react';
-import FormComponent from "./FormComponent"
+import ButtonComponent from "./ButtonComponent"
 
 
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = {date: new Date(),
+      Username : " " ,
+      backgroundColor : " ",
+      textColor : " "};
+
   }
+
 
   componentDidMount() {
     this.timerID = setInterval(
@@ -24,14 +29,28 @@ class Clock extends React.Component {
       date: new Date()
     });
   }
+    handleChange = (e) =>{
+        this.setState({
+           [e.target.name] : e.target.value
+        })
+        console.log(e.target.value)
+    }
 
-  render() {
+    handleForm = (e) =>{ //stops the page from refreshing the form
+        console.log("Formm")
+        e.preventDefault()
+    }
+
+
+
+  render(){
     return (
       <div>
-        <h1>Hello, </h1>
+        <ButtonComponent handleChange={this.handleChange} handleForm={this.handleForm}/>
+        <h1>Hello, {this.state.Username}</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
       </div>
-    );
+    )
   }
 }
 

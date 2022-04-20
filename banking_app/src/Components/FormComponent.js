@@ -7,7 +7,7 @@ function FormComponent(props) {
     return(
         <div className = "FormComponent">
 
-            <form >
+            <form onSubmit={props.handleForm}>
 
             <label> Username: </label>
             <input
@@ -37,6 +37,7 @@ function FormComponent(props) {
 
             <input
             type = "submit"
+            value = "submit"
             />
 
             </form>
