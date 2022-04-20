@@ -5,7 +5,7 @@ import './App.css';
 //import Content from './components/Form';
 import Clock from './Components/Clock';
 import DropdownList from './DropdownList';
-import ButtonComponent from "./Components/ButtonComponent"
+
 
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
         {/* <Clock user= {this.state.user} />
         <Content /> */}
         <Clock/>
-        <ButtonComponent/>
+
         <DropdownList/>
         {/* <Form changeUser = {this.changeUser} /> */}
       </div>
